@@ -7,7 +7,7 @@ namespace NancyTutorial
         public Car GetById(int id)
         {
             if (id == 321)
-                throw new CarNotFoundException();
+                throw new CarNotFoundException("Car with Id:" + id + " Not Found");
             return new Car
                        {
                            Id = id,

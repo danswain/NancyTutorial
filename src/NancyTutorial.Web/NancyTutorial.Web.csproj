@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NancyTutorial</RootNamespace>
-    <AssemblyName>NancyTutorial</AssemblyName>
+    <RootNamespace>NancyTutorial.Web</RootNamespace>
+    <AssemblyName>NancyTutorial.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -70,6 +70,7 @@
     <Compile Include="CarRepository.cs" />
     <Compile Include="ICarRepository.cs" />
     <Compile Include="NancyBootstrapper.cs" />
+    <Compile Include="CarNotFoundExceptionErrorPipeline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructureMapContainer.cs" />
   </ItemGroup>

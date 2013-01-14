@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
+﻿using System.Text;
 using Nancy;
-using Nancy.Bootstrappers.StructureMap;
+using Nancy.Bootstrapper;
 
 namespace NancyTutorial
 {
-    public class NancyBootstrapper : StructureMapNancyBootstrapper
+    public class CarNotFoundExceptionErrorPipeline : IApplicationStartup
     {
-        protected override void ConfigureApplicationContainer(StructureMap.IContainer existingContainer)
-        {
-            StructureMapContainer.Configure(existingContainer);
-        }
-
-        protected override void ApplicationStartup(StructureMap.IContainer container, Nancy.Bootstrapper.IPipelines pipelines)
+        public void Initialize(IPipelines pipelines)
         {
             pipelines.OnError += (context, exception) =>
             {
